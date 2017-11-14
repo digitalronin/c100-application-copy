@@ -6,3 +6,23 @@ before_script:
 script:
   - bundle exec rake
   - bundle exec danger
+
+before_deploy: "echo 'Ready?'"
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: $ACCESSKEYID
+  secret_access_key:
+    secure: $SECRETACCESSKEY
+  region: "eu-west-2"  
+  app: "C100-Tariq"
+  env: "C100-Tariq-Env"
+  bucket_name: "c100tariq"
+  on:
+    branch: beanstalk
+
+after_deploy:
+  - ./.run.sh
+  # - ./set_heroku_env_vars.sh
+  - echo "All done"
+
