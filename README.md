@@ -7,7 +7,7 @@ This is a fork of the live project, used to demonstrate and refine collaboration
 
 Work in progress: This is a Rails application to enable citizens
 to complete the C100 form. It is based on software patterns developed for the
-[Appeal to the Tax Tribunal][taxtribs] application. This iteration of the app has been created as a learning project to be considered independently of the original app.
+[Appeal to the Tax Tribunal][taxtribs] application.
 
 ## Heroku demo.
 
